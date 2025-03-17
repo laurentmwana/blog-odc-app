@@ -13,8 +13,6 @@ class ArticleController extends Controller
      */
     public function index(Request $request)
     {
-
-
         return ArticleResource::collection(Article::paginate());
     }
 
