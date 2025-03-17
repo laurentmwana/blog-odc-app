@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(ArticleSeeder::class);
+
+        Comment::factory()->count(100)->create();
     }
 }
